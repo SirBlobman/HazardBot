@@ -24,6 +24,10 @@ import xyz.hazardbot.utility.yaml.file.YamlConfiguration;
 
 public class HazardBot {
     public static DiscordApi API;
+    public static double botVersion;
+    public static double botYear;
+    public static String botPrefix;
+    public static String botStatus;
     
     public static void main(String[] args) {
         YamlConfiguration config = loadMainConfig();
@@ -78,6 +82,11 @@ public class HazardBot {
         String activitiyMessage = getActivityMessage();
         API.updateActivity(activityType, activitiyMessage);
         Util.print("Hazard Bot Online!");
+
+        botVersion = 0.1;
+        botYear = 2018;
+        botPrefix = "??";
+        botStatus = "Under Work";
         
         String botStatus = getBotStatus();
         for (String userID : SpecialUserID.getAllBotCreators()) {
@@ -126,4 +135,20 @@ public class HazardBot {
         
         CommandListener.registerCommands(new CommandInvite(), new CommandPing());
     }
+
+	public static double getVersion() {
+		return botVersion;
+	}
+
+	public static double getYear() {
+		return botYear;
+	}
+
+	public static String getPrefix() {
+		return botPrefix;
+	}
+
+	public static String getStatus() {
+		return botStatus;
+	}
 }
