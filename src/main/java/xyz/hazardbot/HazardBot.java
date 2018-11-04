@@ -15,6 +15,7 @@ import org.javacord.api.entity.user.User;
 import org.javacord.api.entity.user.UserStatus;
 
 import xyz.hazardbot.command.CommandListener;
+import xyz.hazardbot.command.user.CommandInvite;
 import xyz.hazardbot.command.user.CommandPing;
 import xyz.hazardbot.constants.SpecialUserID;
 import xyz.hazardbot.utility.FileUtil;
@@ -124,6 +125,6 @@ public class HazardBot {
 	private static void registerCommands() {
 		API.addMessageCreateListener(new CommandListener());
 		
-		CommandListener.registerCommands(new CommandPing());
+		CommandListener.registerCommands(new CommandInvite(), new CommandPing());
 	}
 }
