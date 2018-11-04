@@ -11,27 +11,27 @@ import xyz.hazardbot.command.ICommand;
 
 public class CommandInvite extends ICommand {
     public CommandInvite() {super("invite", "");}
-
+    
     @Override
     public void run(MessageAuthor ma, TextChannel tc, String[] args) {
-            Permissions permissions = new PermissionsBuilder()
-                .setState(PermissionType.ADMINISTRATOR, PermissionState.ALLOWED)
-                .build();
+        Permissions permissions = new PermissionsBuilder()
+            .setState(PermissionType.ADMINISTRATOR, PermissionState.ALLOWED)
+            .build();
         String inviteLink = ma.getApi().createBotInvite(permissions);
-
+        
         EmbedBuilder eb1 = new EmbedBuilder()
             .setTitle("Bot Invite Link")
             .setDescription(inviteLink)
-            .setColor(Color.magenta);
+            .setColor(Color.MAGENTA);
         tc.sendMessage(eb1);
-        };
+    };
     
-
+    
     @Override
     public String getHelpDescription() {
-        return "";
+        return "Get an invite link for Hazard Bot";
     }
-
+    
     @Override
     public int getRequiredAccessLevel() {
         return 0;
