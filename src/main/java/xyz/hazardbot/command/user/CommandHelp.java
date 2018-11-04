@@ -30,11 +30,16 @@ public class CommandHelp extends ICommand {
         		.addField("🏆**Bot Developers**", "HZD Nicky#5934\nSirBlobman#7235", true)
         		.addField("🔋**Current Bot Status**", status, true)
         		.addField("❓**Don't Know A Command?**", "If you don't know what a command does, type " + prefix + " and just the command! It will send you the command along with the correct usage.");
-        		tc.sendMessage(eb1);
+        		sendPrivateMessage(ma, eb1);
     };
     
     
-    @Override
+    private void sendPrivateMessage(MessageAuthor author, EmbedBuilder content) {
+		// blob pls help i dont know how to do this e.e ;--------;
+	}
+
+
+	@Override
     public String getHelpDescription() {
         return "Get the list of help commands for the Hazard Bot";
     }
@@ -43,4 +48,5 @@ public class CommandHelp extends ICommand {
     public int getRequiredAccessLevel() {
         return 0;
     }
+    
 }
