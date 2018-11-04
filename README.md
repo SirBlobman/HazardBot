@@ -1,2 +1,2 @@
 # HazardBot
-Working on this with HZD Nicky
+Working on this with YourPalNicky
