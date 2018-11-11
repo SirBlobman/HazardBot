@@ -5,7 +5,7 @@ import java.util.Map;
 
 import xyz.hazardbot.utility.Util;
 
-public class SpecialUserID {
+public final class SpecialUserID {
     public static final String HZD_NICKY = "254820207829319681", SIRBLOBMAN = "252285975814864898",
             CONNOR = "303687748441604096";
     
